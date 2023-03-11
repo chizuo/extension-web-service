@@ -26,3 +26,39 @@ Now you can run the site locally on a dev server with `flask run`! Optionally, u
 * [Black](https://black.readthedocs.io/en/stable/)
 * [mypy](https://mypy.readthedocs.io/en/stable/)
 * [flake8](https://flake8.pycqa.org/en/latest/)
+
+## endpoints
+
+* [HTTP request methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+* [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
+### create account
+
+POST /v1/register
+{
+	"email": <string>,
+	"password": <string>
+}
+returns 204 or 400
+
+### log in
+
+POST /v1/login
+{
+	"email": <string>,
+	"password": <string>
+}
+returns 204 or 401
+
+### log out
+
+POST /v1/logout
+returns 204
+
+### forgot password
+
+POST /v1/forgot-password
+{
+	"email": <string>,
+}
+returns 204 or 400
