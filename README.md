@@ -34,31 +34,44 @@ Now you can run the site locally on a dev server with `flask run`! Optionally, u
 
 ### create account
 
-POST /v1/register
+POST `/v1/register`
+
+```json
 {
 	"email": <string>,
 	"password": <string>
 }
+```
+
 returns 204 or 400
 
 ### log in
 
-POST /v1/login
+POST `/v1/login`
+
+```json
 {
 	"email": <string>,
 	"password": <string>
 }
+```
+
 returns 204 or 401
 
 ### log out
 
-POST /v1/logout
+POST `/v1/logout`
+
 returns 204
 
 ### forgot password
 
-POST /v1/forgot-password
+POST `/v1/forgot-password`
+
+```json
 {
 	"email": <string>,
 }
+```
+
 returns 204 or 400
